@@ -248,7 +248,36 @@ body, html, .container{
     background-color: white;
     width: 90%;
     height: 100%;
-    overflow: hidden;
     border-radius: 10px;
     box-shadow: 5px 5px 5px grey;
+}
+
+.ann-card{
+    /* display: grid;
+    grid-template-rows: 33.333% 33.333% 33.333%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ann-content{
+    margin: 0 7%;
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-rows: 33.333% 33.333% 33.333%;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+    gap:5%
+}
+.one{
+    grid-row: 1/2;
+}
+
+.two{
+    grid-row: 2/3;
+}
+
+.three{
+    grid-row: 3/4;
 }
