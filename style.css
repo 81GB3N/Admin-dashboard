@@ -82,15 +82,6 @@ body, html, .container{
     gap: 10%;
 }
 
-.main{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    background-color: rgb(235, 235, 235);
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 45% 45% 10%;
-}
-
 .dashboard{
     font-size: 1.3rem;
 }
@@ -129,36 +120,48 @@ body, html, .container{
     margin: 0;
 }
 
+.main{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: rgb(235, 235, 235);
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 10% 35%  10% 35% 10%;
+}
+
 .card{
     border-left: 5px solid rgb(247, 223, 7);
     border-radius: 10px;
     background-color: white;
     width: 90%;
     height: 100%;
+    box-shadow: 5px 5px 5px grey;
 }
 
 .your-projects{
-    grid-row: 1/3;
+    grid-row: 2/5;
     grid-column: 1/2;
     display: grid;
-    grid-template-rows: 10% 90%;
-    margin: 1vh 3% 0 3%;
+    margin-left: 3%;
+    height: 100%;
 }
 
-.your-projects>h2{
-    margin: 0;
-    margin-top: 0%;
-    grid-column: 1/3;
-    grid-row: 1/2;
+.cards{
+    grid-row: 1/5;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
+    gap: 10px;
 }
 
 .ann{
-    grid-row: 1/2;
+    grid-row: 2/3;
     grid-column: 2/3;
 }
 
 .trending{
-    grid-row: 2/3;
+    grid-row: 4/5;
     grid-column: 2/3;
 }
 
@@ -166,25 +169,13 @@ body, html, .container{
 .ann-card, .trending-card{
     background-color: white;
     width: 90%;
-    height: 75%;
+    height: 100%;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
 }
 
-.cards{
-    grid-row: 2/3;
-    grid-column: 1/3;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(3, minmax(100px, 1fr));
-    gap: 10px;
-}
-.ann>h2, .trending>h2{
-    margin-top: 0%;
-}
-.ann, .trending{
-    margin-top: 1vh;
-}
+
 
 .left-cards{
     display: grid;
@@ -198,4 +189,26 @@ body, html, .container{
     gap: 10px;
     grid-row: 1/4;
     grid-column: 2/3;
+}
+
+.project-name{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: grid;
+    align-self: center;
+    margin-left: 3%;
+}
+
+.ann-name{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: grid;
+    align-self: center;
+}
+
+.trending-name{
+    grid-row: 3/4;
+    grid-column: 2/3;
+    display: grid;
+    align-self: center;
 }
