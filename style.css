@@ -312,11 +312,14 @@ body, html, .container{
 
 .flexing{
     display: flex;
+    gap: 13px;
+    margin-left: 7px;
 }
 
 .white{
     width: 20px;
-    fill: blanchedalmond;
+    /* gap: 5px; */
+    fill: white;
 }
 
 .big{
